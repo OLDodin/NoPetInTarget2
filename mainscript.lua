@@ -1,15 +1,16 @@
 local function OnTargetChanged()
 	local unitID = avatar.GetTarget()
 	if unitID then
-		local unitName = object.GetName(unitID)
+		local unitNameWStr = object.GetName(unitID)
+		local unitNameStr = userMods.FromWString(unitNameWStr)
 		local needUnselectTarget = true
 		for _, ignoreName in ipairs(IgnoreList) do
-			if ignoreName == userMods.FromWString(unitName) then
+			if ignoreName == unitNameStr then
 				needUnselectTarget = false
 			end
 		end
 		for _, additionalTargetName in ipairs(TargetList) do
-			if additionalTargetName == userMods.FromWString(unitName) then
+			if additionalTargetName == unitNameStr then
 				if needUnselectTarget then
 					avatar.UnselectTarget()
 					return
