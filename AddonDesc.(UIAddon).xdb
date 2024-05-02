@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UIAddon>
+	<AutoStart>true</AutoStart>
+	<Name>NoPetInTarget2</Name>
+	<localizedNameFileRef href="name.txt"/>
+	<localizedDescFileRef href="desc.txt"/>
+	<ScriptFileRefs>
+		<Item href="/Mods/SampleCommon/SampleAddonBase.lua"/>
+		<Item href="Settings.lua"/>
+		<Item href="mainscript.lua"/>
+	</ScriptFileRefs>
+	<visObjects href=""/>
+	<addon_name>NoPetInTarget2</addon_name>
+</UIAddon>
